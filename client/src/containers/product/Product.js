@@ -3,7 +3,10 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import ProductList from "../../components/product/ProductList";
 import { withRouter } from "react-router-dom"
-import axios from "axios";
+import { connect } from "react-redux";
+import {productsFetch , productsDelete} from '../../actions'
+
+
 
 class Product extends Component {
   constructor(props) {
@@ -13,9 +16,8 @@ class Product extends Component {
     this.editProduct = this.editProduct.bind(this);
   }
   componentDidMount() {
-    axios.get("http://localhost:3001/products").then((res) => {
-      this.setState({ products: res.data });
-    });
+    this.props.productsFetch();
+
   }
 
   editProduct(product) {
@@ -25,11 +27,7 @@ class Product extends Component {
 
 
   delProduct(product) {
-    axios.delete("http://localhost:3001/products/" + product.id).then((res) => {
-      axios.get("http://localhost:3001/products").then((res) => {
-        this.setState({ products: res.data });
-      });
-    });
+ this.props.productsDelete(product.id);
   }
 
   render() {
@@ -49,7 +47,7 @@ class Product extends Component {
                     </div>
                 </div>
                 {/* /* props อ้างอิน products in Json */ }
-            <ProductList products={this.state.products}
+            <ProductList products={this.props.products}
               onDelProduct={this.delProduct} onEditProduct={this.editProduct}/>
           
             </div>
@@ -61,4 +59,8 @@ class Product extends Component {
   
 }
 
-export default withRouter(Product);
+function mapStateToProps({products }) {
+  return { products }
+}
+
+export default withRouter( connect(mapStateToProps, {productsFetch, productsDelete})(Product));
