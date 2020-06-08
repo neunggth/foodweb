@@ -13,7 +13,7 @@ export const ordersFetch = () => {
   }  
 };
 
-export const ordersDelete = (id) => {
+export const orderDelete = (id) => {
     return dispatch => {
         axios.delete("http://localhost:3001/orders/" + id ).then(res => {
             axios.get("http://localhost:3001/orders").then(
