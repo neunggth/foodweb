@@ -43,10 +43,14 @@ class Product extends Component {
                         </button>
                     </div>
                 </div>
-                {/* /* props อ้างอิน products in Json */ }
-            <ProductList products={this.props.products}
-              onDelProduct={this.delProduct} onEditProduct={this.editProduct}/>
+
+
+                {this.props.products && Array.isArray(this.props.products) &&
+       
+            (<ProductList products={this.props.products}
+              onDelProduct={this.delProduct} onEditProduct={this.editProduct}/>)
           
+                }
             </div>
           <Footer />
           
@@ -56,7 +60,7 @@ class Product extends Component {
   
 }
 
-function mapStateToProps({products }) {
+function mapStateToProps({products}) {
   return { products }
 }
 
