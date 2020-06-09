@@ -1,9 +1,16 @@
-import React from "react"
+import React from "react";
 
-export default ({ input,label,type, required }) => {
-    return ( 
+export default ({ input, label, type, required }) => {
+  return (
     <div className="form-group">
-        <label className="title"> {label} </label>
-        <input type={type} required={required} {...input}className="form-control" />
-    </div>)
-}
+      <label className="title"> {label} </label>
+      <input
+        type={type}
+        required={required}
+        // เอาออกมาทุกตัว
+        {...input}
+        className="form-control"
+      />
+    </div>
+  );
+};
