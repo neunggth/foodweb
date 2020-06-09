@@ -8,7 +8,7 @@ class ProductEdit extends Component {
     return (
       <div>
         <Header />
-        
+
         <div className="container col-md-5">
           <ProductForm />
         </div>

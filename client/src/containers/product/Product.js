@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 import ProductList from "../../components/product/ProductList";
 import { withRouter } from "react-router-dom"
 import { connect } from "react-redux";
-import {productsFetch , productsDelete} from '../../actions'
+import {productsFetch , productsDelete} from '../../actions/index'
 
 class Product extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class Product extends Component {
   }
 
   editProduct(product) {
-    this.props.history.push('product/edit' + product.id)
+    this.props.history.push('product/edit/' + product.id)
 
   }
 
