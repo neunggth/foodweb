@@ -3,8 +3,9 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { connect } from "react-redux";
 import { ordersFetch , orderDelete} from "../../actions"
-// buy and import
+
 class Order extends Component {
+
   constructor(props) {
     super(props);
   }
@@ -17,7 +18,7 @@ class Order extends Component {
   }
 
   delOrder(order) {
-    this.props.orderDelete(order.id)
+    this.props.orderDelete(order.id);
 
   }
 
@@ -79,4 +80,4 @@ function mapStateToProps({orders}){
 
 
 }
-export default connect(mapStateToProps, { ordersFetch, orderDelete}) (Order);
+export default connect(mapStateToProps, {ordersFetch, orderDelete}) (Order);

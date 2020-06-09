@@ -6,12 +6,9 @@ import { withRouter } from "react-router-dom"
 import { connect } from "react-redux";
 import {productsFetch , productsDelete} from '../../actions'
 
-
-
 class Product extends Component {
   constructor(props) {
     super(props);
-    this.state = { products: null }
     this.delProduct = this.delProduct.bind(this);
     this.editProduct = this.editProduct.bind(this);
   }
