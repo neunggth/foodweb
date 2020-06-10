@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Calculator extends Component {
 
     showOrders(orders) {
-        // eslint-disable-next-line eqeqeq
+    
         if (!orders || orders.length == 0) {
             return <li className="text-right text-muted title">No Item</li>;
         } else {

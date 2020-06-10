@@ -5,10 +5,7 @@ class Header extends Component {
     super(props);
     this.state = { date: new Date() };
   }
-  // ?? lifecycle Component
-  // 1.componentDidMount
-  // 2.componentDidUpdate
-  // 3.componentWillUnmount
+ 
   componentDidMount() {
     this.timerID = setInterval(() => this.tick(), 1000);
   }
@@ -20,7 +17,7 @@ class Header extends Component {
   }
 
   tick() {
-    // this.state ={date : new Date()}
+
     this.setState({ date: new Date() });
   }
 

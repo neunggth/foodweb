@@ -1,51 +1,50 @@
 import React, { Component } from "react";
-import {connect } from "react-redux";
-import { reduxForm, Field, getFormInitialValues } from "redux-form";
-import formField from "../common/FormField";
+import { connect } from "react-redux";
+import { reduxForm, Field } from "redux-form";
 import { productFormField } from "./formFields";
+import FormField from "../common/FormField";
 
 class ProductForm extends Component {
+	renderFields(formFields) {
+		return formFields.map(({ label, name, type, required }) => {
+			return (
+				<Field
+					key={name}
+					component={FormField}
+					type={type}
+					label={label}
+					name={name}
+					required={required}
+				/>
+			);
+		});
+	}
 
-  renderFields(formFields) {
-    return formFields.map(({ label, name, type, required }) => {
-      return (
-        <Field
-          key={name}
-          label={label}
-          name={name}
-          type={type}
-          required={required}
-          component={formField}
-        />
-      );
-    });
-  }
-
-  render() {
-    const { onProductSubmit } = this.props;
-    return (
-      <div>
-        <form onSubmit={this.props.handleSubmit(onProductSubmit)}>
-          {this.renderFields(productFormField)}
-          <button className="btn btn-block btn-info title" type="submit">
-            Save
-          </button>
-        </form>
-      </div>
-    );
-  }
+	render() {
+		const { onProductSubmit } = this.props;
+		return (
+			<div>
+				<form onSubmit={this.props.handleSubmit(onProductSubmit)}>
+					<div>{this.renderFields(productFormField)}</div>
+					<div>
+						<button className="btn btn-block btn-info title" type="submit" name="action" >
+							บันทึก
+						</button>
+					</div>
+				</form>
+			</div>
+		);
+	}
 }
-// validate 
-function validate(values) {
 
-  const errors ={};
-  productFormField.forEach(({ name, required }) =>{
-    if(!values[name] && required) {
-      errors[name] = 'กรุณากรอกข้อมูลด้วยค่ะ'
-    }
-  });
-  return errors;
-  
+function validate(values) {
+	const errors = {};
+	productFormField.forEach(({ name, required }) => {
+		if (!values[name] && required) {
+			errors[name] = "กรุณากรอกข้อมูลด้วยค่ะ";
+		}
+	});
+	return errors;
 }
 
 function mapStateToProps({ products }) {

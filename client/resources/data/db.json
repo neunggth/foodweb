@@ -43,52 +43,10 @@
       "thumbnail": "/images/product/6.jpg"
     },
     {
-      "id": 6,
-      "productName": "กาแฟ เฮลตี้ฟู้ด",
-      "unitPrice": "140",
-      "thumbnail": "/images/product/6.jpg"
-    },
-    {
       "productName": "ไก่ทอด V2 ",
       "unitPrice": "299",
-      "thumbnail": "/images/product/6.jpg",
+      "thumbnail": "/images/product/5.jpg",
       "id": 7
-    },
-    {
-      "productName": "ไก่ทอด V2 ",
-      "unitPrice": "299",
-      "thumbnail": "/images/product/6.jpg",
-      "id": 8
-    },
-    {
-      "productName": "ไก่ทอด V2 ",
-      "unitPrice": "299",
-      "thumbnail": "/images/product/6.jpg",
-      "id": 9
-    },
-    {
-      "productName": "ไก่ทอด V2 ",
-      "unitPrice": "299",
-      "thumbnail": "/images/product/6.jpg",
-      "id": 10
-    },
-    {
-      "productName": "ไก่ทอด V2 ",
-      "unitPrice": "299",
-      "thumbnail": "/images/product/6.jpg",
-      "id": 11
-    },
-    {
-      "productName": "ไก่ทอด V2 ",
-      "unitPrice": "299",
-      "thumbnail": "/images/product/6.jpg",
-      "id": 12
-    },
-    {
-      "productName": "ไก่ทอด V2 ",
-      "unitPrice": "299",
-      "thumbnail": "/images/product/6.jpg",
-      "id": 14
     }
   ],
   "orders": []

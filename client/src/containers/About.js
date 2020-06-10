@@ -10,7 +10,7 @@ const About = () =>{
         <div className="container col-md-5">
 
             <h3>Hello</h3>
-            <p> lorem    </p>
+            <p> lorem  </p>
             <h4 className="text-success"> From Healthy cafe</h4>
         </div>
          <Footer   company="TH Engineering.,co.ltd"
