@@ -89,18 +89,6 @@
       "unitPrice": "299",
       "thumbnail": "/images/product/6.jpg",
       "id": 14
-    },
-    {
-      "productName": "ไก่ทอด V2 ",
-      "unitPrice": "299",
-      "thumbnail": "/images/product/6.jpg",
-      "id": 15
-    },
-    {
-      "productName": "ไก่ทอด V2 ",
-      "unitPrice": "299",
-      "thumbnail": "/images/product/6.jpg",
-      "id": 16
     }
   ],
   "orders": []

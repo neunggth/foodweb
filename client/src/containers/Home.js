@@ -15,7 +15,7 @@ class Home extends Component {
 
   render() {
     return (
-      // JSX 
+
       <div>
         <Header />
         <Monitor products={this.props.products} />
